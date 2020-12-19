@@ -1,0 +1,29 @@
+{
+  "name": "react-arduino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/socket.io-client": "^1.4.34",
+    "concurrently": "^5.3.0",
+    "socket.io-client": "^3.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:arduino\" \"npm run start:back\" \"npm run start:front\"",
+    "dev": "concurrently \"npm run dev:arduino\" \"npm run dev:back\" \"npm run dev:front\"",
+    "start:arduino": "npm start --prefix arduino",
+    "start:back": "npm start --prefix back",
+    "start:front": "npm start --prefix front",
+    "dev:arduino": "npm run dev --prefix arduino",
+    "dev:back": "npm run dev --prefix back",
+    "dev:front": "npm run dev --prefix front"
+  },
+  "author": "",
+  "license": "ISC"
+}
